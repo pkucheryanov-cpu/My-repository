@@ -26,5 +26,15 @@ def get_environment():
         "developer": "p.kucheryanov"
     })
 
+@app.route('/api/config')
+def get_config():
+    return jsonify({
+        "app": "ShopEasy",
+        "debug": False,
+        "locale": "uk-UA",
+        "owner": "p.kucheryanov"
+    })
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
